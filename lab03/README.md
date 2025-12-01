@@ -46,6 +46,16 @@ cd sherlock
 pip3 install -r requirements.txt
 ```
 
+Lahko poskusite tudi z:
+```bash
+python3 -m venv sherlock-env
+pip install -r requirements.txt\n
+source sherlock-env/bin/activate
+pip install sherlock
+
+```
+
+
 Zaženete Sherlock:
 
 ```bash
@@ -69,6 +79,15 @@ git clone https://github.com/soxoj/maigret.git
 cd maigret
 pip install -r requirements.txt
 ```
+
+Lahko poskusite tudi z:
+```bash
+python3 -m venv maigret-env
+pip install -r requirements.txt\n
+source maigret-env/bin/activate
+pip install maigret
+```
+
 
 Zagon Maigret: 
 
