@@ -65,6 +65,7 @@ sudo tcpdump -i any tcp port 1025 -w smtp.pcap &
 ### Pošiljanje testnega sporočila s **swaks**
 
 ```bash
+sudo apt install swaks
 swaks --server 127.0.0.1 --port 1025   --from ti@example.com --to test@example.com   --data "Subject: Codespace SWAKS Test\n\nPozdrav iz FIS!"
 ```
 

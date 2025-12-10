@@ -91,7 +91,7 @@ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 2️⃣ Prikaz najdenih gesel:
 
 ```bash
-john --show hashes.txt
+john --show --format=raw-md5 hashes.txt
 ```
 
 ### 📝 Analiza in poročilo

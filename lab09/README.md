@@ -17,6 +17,10 @@ Na voljo imate Docker image z ranljivim SSH strežnikom, ki omogoča testiranje 
 
 Če še niste, najprej zgradite Docker image z imenom `dvws`:
 ```bash
+sudo apt update
+sudo apt install docker-cli
+sudo apt install docker.io
+wget https://raw.githubusercontent.com/rpritr/KV-Vaje/refs/heads/main/lab09/dvws/Dockerfile
 docker build -t dvws .
 ```
 
@@ -74,13 +78,17 @@ Zapišite si:
 
 💡 Refleksija: zakaj zapirati neuporabljene porte?
 
+IP strežnik znotraj docker okolja lahko poiščemo z ukazom
+```bash
+sudo docker inspect dvws-ssh | grep IPAddress
+```
 ---
 
 ### 🔷 Korak 2: Preveri SSH povezavo
 
 Prepričajte se, da SSH storitev deluje:
 ```bash
-ssh testuser@<target_ip> -p 2222
+ssh testuser@<target_ip> -p 22
 ```
 Geslo: `test123`
 
@@ -102,13 +110,13 @@ admin" > passwords.txt
 
 Uporabite Hydra za napad:
 ```bash
-hydra -l testuser -P passwords.txt -s 2222 <target_ip> ssh
+hydra -l testuser -P passwords.txt -s 22 <target_ip> ssh
 ```
 
 Parametri:
 - `-l testuser` — uporabniško ime
 - `-P passwords.txt` — seznam gesel
-- `-s 2222` — številka vrat
+- `-s 22` — številka vrat
 - `<target_ip>` — IP naslov strežnika
 - `ssh` — protokol
 
