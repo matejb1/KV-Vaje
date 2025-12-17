@@ -26,7 +26,7 @@ docker build -t dvws .
 
 Nato zaženite container:
 ```bash
-docker run -d -p 2222:22 --name dvws-ssh dvws
+sudo docker run -d -p 2222:22 --name dvws-ssh dvws
 ```
 
 SSH strežnik bo zdaj na voljo na host računalniku na naslovu `<target_ip>`, port `2222`, z uporabnikom `testuser` in geslom `test123`.

@@ -31,7 +31,7 @@ Namig: v izvorni kodi spletne strani poiščite poddomeno, ki se uporablja za se
   <summary>Kliknite tukaj za prikaz rešitve</summary>
 
   Javna datoteka se nahaja na domeni v korenski mapi. Ime datoteke je key.txt.
-  Zastavica rešitve: `e94ab8a5-b0c1-4559-8bc7-cae2e53b10e0`
+  Zastavica rešitve: `aeaee57f-2a82-41da-bc4c-d081c8cddfc8`
 </details>
 
 ## Odkrivanje ranljivosti v Javascript datotekah
@@ -130,11 +130,9 @@ V nadaljevanju se osredotočimo še na repo9. Tu moramo poiskati spremembe v dat
 <details>
   <summary>Kliknite tukaj za prikaz rešitve</summary>
   Poiščemo spremembe
-  ```bash
-  git log --diff-filter=D --summary
-  git log -- KEY.txt
+  git log --diff-filter=D --summary &&
+  git log -- KEY.txt &&
   git show COMMIT_HASH:KEY.txt
-  ```
   Zastavica rešitve: `3ee505c2-8aa9-4d5e-810e-921778dce1e6`
 </details>
 
@@ -145,11 +143,9 @@ V nadaljevanju se osredotočimo še na repo0a. Tu moramo poiskati poslano sporo�
 <details>
   <summary>Kliknite tukaj za prikaz rešitve</summary>
   Poiščemo log
-  ```bash
-  git log --oneline
-  git log --oneline --grep=key -i
+  git log --oneline &&
+  git log --oneline --grep=key -i &&
   git show COMMIT_HASH
-  ```
   Zastavica rešitve: `5c75cfe9-52dd-475b-8cfa-7ffc492abeca`
 </details>
 
